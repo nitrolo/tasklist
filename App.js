@@ -4,24 +4,9 @@ import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={{ padding: 100 }}>
-      <View
-        style={{
-          alignItems: 'center',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-        }}
-      >
-        <TextInput
-          placeholder="Add Goal"
-          style={{
-            textAlign: 'center',
-            borderBottomColor: 'black',
-            borderBottomWidth: 1,
-            padding: 10,
-            width: '80%',
-          }}
-        />
+    <View style={styles.screen}>
+      <View style={styles.inputContainer}>
+        <TextInput placeholder="Add Goal" style={styles.input} />
         <Button title="+" />
       </View>
       <View></View>
@@ -29,4 +14,20 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  screen: {
+    padding: 100,
+  },
+  inputContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  input: {
+    textAlign: 'center',
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+    padding: 10,
+    width: '80%',
+  },
+});
