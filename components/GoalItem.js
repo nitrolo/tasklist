@@ -1,11 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const GoalItem = ({ title }) => {
+const GoalItem = ({ id, title, onDelete }) => {
   return (
-    <View style={styles.listItem}>
-      <Text>{title}</Text>
-    </View>
+    <TouchableOpacity onPress={() => onDelete(id)}>
+      <View style={styles.listItem}>
+        <Text>{title}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
