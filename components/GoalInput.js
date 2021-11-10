@@ -17,7 +17,7 @@ const GoalInput = ({ isVisible, onAddGoal }) => {
           onChangeText={goalInputHandler}
           value={enteredGoal}
         />
-        <Button title="+" onPress={() => onAddGoal(enteredGoal)} />
+        <Button title="Add Note" onPress={() => onAddGoal(enteredGoal)} />
       </View>
     </Modal>
   );
@@ -26,14 +26,15 @@ const GoalInput = ({ isVisible, onAddGoal }) => {
 const styles = StyleSheet.create({
   inputContainer: {
     alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flex: 1,
+    justifyContent: 'center',
   },
   input: {
-    textAlign: 'center',
     borderBottomColor: 'black',
     borderBottomWidth: 1,
+    marginBottom: 10,
     padding: 10,
+    textAlign: 'center',
     width: '80%',
   },
 });
